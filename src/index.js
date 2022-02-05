@@ -23,12 +23,9 @@ btn.addEventListener("click", () => {
       function drawLines() {
         let angle = 360 / numSections;
         console.log("angle:", angle);
-        const list = document.getElementById("pizza");
-        const li = document.createElement("li");
 
         for (let i = 1; i <= numSections.sections; i++) {
-          li.innerHTML = "new element";
-          list.appendChild(li);
+          //сектора
         }
       }
       drawLines();
