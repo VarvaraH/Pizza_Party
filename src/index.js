@@ -16,7 +16,7 @@ btn.addEventListener("click", () => {
       const countOfPieces = getCountOfPizzaPieces(data.party);
       appEl.style.display = "none";
       // draw pizza
-      PizzaPieces.innerHTML = `<p>Pizza for ${countOfPieces}<p>`;
+      PizzaPieces.innerHTML = `<p>Pizza for ${countOfPieces} participants<p>`;
 
       const numSections = countOfPieces;
 
