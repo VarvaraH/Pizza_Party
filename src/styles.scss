@@ -7,11 +7,13 @@ body {
 }
 
 #app {
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2px;
+  display: block;
   height: 15px;
+
 }
 
 button {
@@ -23,11 +25,10 @@ button {
   border: 3px solid;
   padding: 0 3rem; 
   margin-top: 15px;
-  margin-bottom: 7px; 
   display: inline-block;
   vertical-align: top;
-    text-decoration: none;
-    transition: opacity .1s linear;
+  text-decoration: none;
+  transition: opacity .1s linear;
   
 }
 
@@ -39,7 +40,7 @@ button:hover {
 .pizza {
   position: relative;
   
-  margin-top: 2ex;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto; 
 
@@ -57,8 +58,7 @@ button:hover {
     
 }
 
-li {
-  // --rotation:0; 
+li { 
 	overflow: hidden;
 	position: absolute;
 	top: 0; right: 0;
@@ -69,27 +69,6 @@ li {
   border-left: 2px solid rgb(255, 127, 80);
 }
 
-  //   li:nth-child(1) {
-  //     transform: rotate(60deg);
-  // }
-
-  //   li:nth-child(2) {
-  //     transform: rotate(120deg);
-  //   }
-
-  //   li:nth-child(3) {
-  //     transform: rotate(180deg);
-  //   }
-
-  //   li:nth-child(4) {
-  //     transform: rotate(240deg);
-  //   }
-  //   li:nth-child(5) {
-  //     transform: rotate(300deg);
-  //   }
-  //   li:nth-child(6) {
-  //     transform: rotate(360deg);
-  //   }
     
     
 
