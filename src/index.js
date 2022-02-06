@@ -14,6 +14,7 @@ btn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
       const countOfPieces = getCountOfPizzaPieces(data.party);
+      btn.classList.remove("loading");
       appEl.style.display = "none";
       // draw pizza
       PizzaPieces.innerHTML = `<p>Pizza for ${countOfPieces} participants<p>`;
@@ -24,8 +25,13 @@ btn.addEventListener("click", () => {
         let angle = 360 / numSections;
         console.log("angle:", angle);
 
-        for (let i = 1; i <= numSections.sections; i++) {
-          //сектора
+        for (let i = 1; i <= numSections; i++) {
+          const createElemLi = document.createElement("li");
+          document.getElementById("pizzaSlices").appendChild(createElemLi);
+
+          // numSections[i] = ;
+          //создать элемент в html
+          //добавить свойства css transform: rotate(angle(n) + angle deg);
         }
       }
       drawLines();
