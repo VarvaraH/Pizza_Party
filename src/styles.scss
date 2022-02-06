@@ -6,15 +6,12 @@ body {
   background: #d35e7b;
 }
 
-.container {
-  
-}
-
 #app {
-margin-bottom: 10px;
-display: block;
-    margin-left: auto;
-    margin-right: auto 
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
 }
 
 button {
@@ -72,28 +69,27 @@ li {
   border-left: 2px solid rgb(255, 127, 80);
 }
 
-    li:first-child {
-      transform: rotate(60deg);
-      //transform: rotate(var(--rotation);
-  }
+  //   li:nth-child(1) {
+  //     transform: rotate(60deg);
+  // }
 
-    li:nth-child(2) {
-      transform: rotate(120deg);
-    }
+  //   li:nth-child(2) {
+  //     transform: rotate(120deg);
+  //   }
 
-    li:nth-child(3) {
-      transform: rotate(180deg);
-    }
+  //   li:nth-child(3) {
+  //     transform: rotate(180deg);
+  //   }
 
-    li:nth-child(4) {
-      transform: rotate(240deg);
-    }
-    li:nth-child(5) {
-      transform: rotate(300deg);
-    }
-    li:nth-child(6) {
-      transform: rotate(360deg);
-    }
+  //   li:nth-child(4) {
+  //     transform: rotate(240deg);
+  //   }
+  //   li:nth-child(5) {
+  //     transform: rotate(300deg);
+  //   }
+  //   li:nth-child(6) {
+  //     transform: rotate(360deg);
+  //   }
     
     
 

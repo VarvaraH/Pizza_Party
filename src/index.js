@@ -9,34 +9,35 @@ appEl.innerHTML = `<p>Click 👆 this button</p>`;
 
 btn.addEventListener("click", () => {
   appEl.innerHTML = "waiting...";
+  btn.classList.add("loading");
 
   fetch("https://gp-js-test.herokuapp.com/pizza")
     .then((response) => response.json())
     .then((data) => {
       const countOfPieces = getCountOfPizzaPieces(data.party);
       btn.classList.remove("loading");
-      appEl.style.display = "none";
-      // draw pizza
+      appEl.innerHTML = "";
+
+      drawLines(countOfPieces);
       PizzaPieces.innerHTML = `<p>Pizza for ${countOfPieces} participants<p>`;
-
-      const numSections = countOfPieces;
-
-      function drawLines() {
-        let angle = 360 / numSections;
-        console.log("angle:", angle);
-
-        for (let i = 1; i <= numSections; i++) {
-          const createElemLi = document.createElement("li");
-          document.getElementById("pizzaSlices").appendChild(createElemLi);
-
-          // numSections[i] = ;
-          //создать элемент в html
-          //добавить свойства css transform: rotate(angle(n) + angle deg);
-        }
-      }
-      drawLines();
     });
 });
+
+function drawLines(countOfPieces) {
+  let angle = 360 / countOfPieces;
+  console.log("angle:", angle);
+  const pizzListEl = document.getElementById("pizza");
+  pizzListEl.innerHTML = "";
+  let prevAngle = angle;
+
+  for (let i = 1; i <= countOfPieces; i++) {
+    const pieceEl = document.createElement("li");
+    pieceEl.style.transform = `rotate(${prevAngle}deg)`;
+    prevAngle += angle;
+    console.log(pieceEl);
+    pizzListEl.appendChild(pieceEl);
+  }
+}
 
 function getCountOfPizzaPieces(people) {
   if (Array.isArray(people)) {
